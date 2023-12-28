@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --primary-text:#2e384d;
+    --primary-white:#fff;
+    --primary-color:#6039ac;
+    --secondary-text:#bfc5d2;
+    --secondary-white:#f9f9f9;
+    --pending-blue:#00D1FF;
+    --todo-red:#FF5353;
+    --done-green:#00B63E;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--primary-text);
+}
+
+.authetication-bg{
+    width: 100%;
+    height: 100vh;
+    background:var(--secondary-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-form,.register-form{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-white);
+    border-radius: .75rem;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 1px;
+}
+
+.form-site-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 100%;
+    color: var(--primary-text);
+    padding: 2%;
+}
+
+.form-site-title i{
+    color: var(--primary-color);
+    margin-right: 1%;
+}
+
+.form-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.75rem;
+    font-weight: 500;
+    padding: 2%;
+}
+
+
+.form-inputs-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.form-inputs-field input{
+    padding: 2%;
+    margin:4% 0;
+    border: 1px solid var(--secondary-text);
+    background: var(--secondary-white);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-cta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2% 20% 4%;
+}
+
+.form-cta-link{
+    display: flex;
+    font-weight: 500;
+}
+
+.form-cta-link a{
+    color: var(--primary-color);
+}
+
+.form-cta-btn{
+    padding: 2% 4%;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: var(--secondary-white);
+}
+
+
