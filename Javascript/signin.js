@@ -1,9 +1,14 @@
-import { jsondata } from "../main.js"
 // Sign In Elements
 const emailsignin = document.getElementById('email-signin-inp')
 const passwordsignin = document.getElementById('password-signin-inp')
 const signinbtn = document.getElementById('form-signin-btn')
+let jsondata
+;
 
+(async ()=>{
+    const res = await fetch('/users-data')
+    jsondata = await res.json()
+})()
 signinbtn.addEventListener('click',()=>{
     const email = emailsignin.value
     const password = passwordsignin.value

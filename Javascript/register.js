@@ -1,9 +1,15 @@
-import { jsondata } from "../main.js"
 // Register Elements
 const nameregister = document.getElementById('name-register-inp')
 const emailregister = document.getElementById('email-register-inp')
 const passwordregister = document.getElementById('password-register-inp')
 const registerbtn = document.getElementById('form-register-btn')
+let jsondata
+;
+
+(async ()=>{
+    const res = await fetch('/users-data')
+    jsondata = await res.json()
+})()
 
 registerbtn.addEventListener('click',()=>{
     const name = nameregister.value

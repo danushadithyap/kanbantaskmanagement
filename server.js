@@ -46,7 +46,12 @@ app.post('/add-user', (req,res)=>{
   res.json(jsonData)
 })
 
-
+app.post('/add-tasks',(req,res)=>{
+  const newtask = req.body;
+  jsonData.tasks.push(newtask)
+  fs.writeFileSync(filePath,JSON.stringify(jsonData,null,2),'utf8')
+  res.json(jsonData)
+})
 app.post('/load-user',(req,res)=>{
   currentuser = req.body
   res.json(jsonData)

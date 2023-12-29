@@ -4,14 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sign-In Kanban Task Management</title>
+    <title>Kanban Task Management</title>
 
     <link rel="shortcut icon" href="./Assets/applogo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Welcome</h1><h1 id="name"></h1>
+    <div class="nav-bar">
+        <div class="site-icon-title">
+            <div class="site-icon"><i class="fa-brands fa-uikit"></i></div>
+            <div class="site-title">Kanban Task Management</div>
+        </div>
+        <div class="user-profile">
+            <div class="user-name" id="logged-in-user"></div>
+            <div class="notification-icon"><i class="fa-regular fa-bell"></i></div>
+            <div class="logout-icon" id="logout-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+        </div>
+    </div>
+
+    <div class="task-dashboard-area">
+        <div class="task-dashboard-title-row">
+            <div class="task-dashboard-title">Task Dashboard</div>
+            <div class="add-task-btn" id="add-task-btn">+ New Task</div>
+        </div>
+        <div class="task-dashboard-cards">
+            <div class="task-dashboard-card">
+                <div class="card-icon"><i class="fa-regular fa-user"></i></div>
+                <div class="card-details">
+                    <div class="card-number" id="active-user-count">12</div>
+                    <div class="card-description">Active Users</div>
+                </div>
+            </div>
+            <div class="task-dashboard-card">
+                <div class="card-icon"><i class="fa-solid fa-list-ul"></i></div>
+                <div class="card-details">
+                    <div class="card-number" id="yet-to-complete-task-count">07</div>
+                    <div class="card-description">Yet to be Completed</div>
+                </div>
+            </div>
+            <div class="task-dashboard-card">
+                <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+                <div class="card-details">
+                    <div class="card-number" id="completed-task-count">16</div>
+                    <div class="card-description">Completed</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-board-area">
+        <div class="task-board-filter-area">
+            <div class="task-board-title">Tasks</div>
+            <div class="task-board-filter">
+                <select name="task-project-filter" id="task-project-filter">
+                    <option value="all">All Projects</option>
+                    <option value="tips2023">Tips 2023</option>
+                    <option value="webtips2023">WebTips 2023</option>
+                </select>
+            </div>
+        </div>
+        <div class="task-boards-list-container">
+            <div class="task-board-list-section">
+                <div class="task-board-list-title todo">Todo +</div>
+                <div class="task-board-list-items">
+                    <div class="task-board-list-item todo-border">
+                        <div class="board-project-date-row">
+                            <div class="todo-task-color-container"></div>
+                            <div class="task-project-name">SDLC</div>
+                            <div class="task-due-date">01/01/2024</div>
+                        </div>
+                        <div class="board-task-name-priority">
+                            <div class="task-name">Create Design Document</div>
+                            <div class="task-priority high">High</div>
+                        </div>
+                        <div class="board-task-asignees">
+                            <div class="task-assignees-label">
+                                Assigned to
+                            </div>
+                            <div class="task-asignee">
+                                Danush Adithya
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-board-list-item todo-border">
+                        <div class="board-project-date-row">
+                            <div class="todo-task-color-container"></div>
+                            <div class="task-project-name">SDLC</div>
+                            <div class="task-due-date">01/01/2024</div>
+                        </div>
+                        <div class="board-task-name-priority">
+                            <div class="task-name">Create Design Document</div>
+                            <div class="task-priority medium">Medium</div>
+                        </div>
+                        <div class="board-task-asignees">
+                            <div class="task-assignees-label">
+                                Assigned to
+                            </div>
+                            <div class="task-asignee">
+                                Danush Adithya
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-board-list-add-btn-todo" id="todo-tasks-add-btn">Add New Task +</div>
+            </div>
+            <div class="task-board-list-section">
+                <div class="task-board-list-title inprogress">In Progress +</div>
+                <div class="task-board-list-items">
+                    <div class="task-board-list-item inprogress-border">
+                        <div class="board-project-date-row">
+                            <div class="inprogress-task-color-container"></div>
+                            <div class="task-project-name">SDLC</div>
+                            <div class="task-due-date">01/01/2024</div>
+                        </div>
+                        <div class="board-task-name-priority">
+                            <div class="task-name">Create Design Document</div>
+                            <div class="task-priority low">Low</div>
+                        </div>
+                        <div class="board-task-asignees">
+                            <div class="task-assignees-label">
+                                Assigned to
+                            </div>
+                            <div class="task-asignee">
+                                Danush Adithya
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-board-list-add-btn-inprogress" id="inprogress-tasks-add-btn">Add New Task +</div>
+            </div>
+            <div class="task-board-list-section">
+                <div class="task-board-list-title done">Done +</div>
+                <div class="task-board-list-items">
+                    <div class="task-board-list-item done-border">
+                        <div class="board-project-date-row">
+                            <div class="done-task-color-container"></div>
+                            <div class="task-project-name">SDLC</div>
+                            <div class="task-due-date">01/01/2024</div>
+                        </div>
+                        <div class="board-task-name-priority">
+                            <div class="task-name">Create Design Document</div>
+                            <div class="task-priority high">High</div>
+                        </div>
+                        <div class="board-task-asignees">
+                            <div class="task-assignees-label">
+                                Assigned to
+                            </div>
+                            <div class="task-asignee">
+                                Danush Adithya
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-board-list-item done-border">
+                        <div class="board-project-date-row">
+                            <div class="done-task-color-container"></div>
+                            <div class="task-project-name">SDLC</div>
+                            <div class="task-due-date">01/01/2024</div>
+                        </div>
+                        <div class="board-task-name-priority">
+                            <div class="task-name">Create Design Document</div>
+                            <div class="task-priority high">High</div>
+                        </div>
+                        <div class="board-task-asignees">
+                            <div class="task-assignees-label">
+                                Assigned to
+                            </div>
+                            <div class="task-asignee">
+                                Danush Adithya
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-board-list-add-btn-done" id="done-tasks-add-btn">Add New Task +</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-overlay" id="form-overlay">
+        <div class="task-form">
+            <div class="task-form-title">Add Tasks</div>
+            <div class="task-form-input-fields">
+                <div class="task-form-row">
+                    <div class="task-form-row-field">
+                        <label for="project-input-form">Project</label>
+                        <input type="text" name="project-input-form" id="project-input-form">
+                    </div>
+                    <div class="task-form-row-field">
+                        <label for="task-input-form">Task</label>
+                        <input type="text" name="task-input-form" id="task-input-form">
+                    </div>
+                </div>
+                <div class="task-form-row">
+                    <div class="task-form-row-field">
+                        <label for="priority-input-form">Priority</label>
+                        <select name="priority-input-form" id="priority-input-form">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="task-form-row-field">
+                        <label for="task-level-input-form">Status</label>
+                        <select name="task-level-input-form" id="task-level-input-form">
+                            <option value="todo">Todo</option>
+                            <option value="inprogress">In Progress</option>
+                            <option value="completed">Done</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="task-form-row">
+                    <div class="task-form-row-field">
+                        <label for="assignedto-input-form">Assign to</label>
+                        <select name="assignedto-input-form" id="assignedto-input-form">
+                            <option value="danushadithya">Danush Adithya</option>
+                            <option value="vigneshshivaram">Vignesh Shivaram</option>
+                        </select>
+                    </div>
+                    <div class="task-form-row-field">
+                        <label for="duedate-input-form">Due date</label>
+                        <input type="date" name="duedate-input-form" id="duedate-input-form">
+                    </div>
+                </div>
+            </div>
+            <div class="task-form-cta-btns">
+                <div class="task-form-btn cancel-btn" id="task-form-cancel-btn">Cancel</div>
+                <div class="task-form-btn add-btn" id="task-form-add-btn">Add</div>
+            </div>
+        </div>
+    </div>
     <script src="../Javascript/userdashboard.js" type="module"></script>
 </body>
 </html>

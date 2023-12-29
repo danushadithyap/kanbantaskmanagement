@@ -20,6 +20,60 @@
       "email": "vignesh@gmail.com",
       "password": "12345678",
       "role": "developer"
+    },
+    {
+      "id": 4,
+      "username": "Dhana Abhiraj",
+      "email": "dhana@gmail.com",
+      "password": "12345678",
+      "role": "developer"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "project": "TIPS 2024",
+      "task": "Kanban Board",
+      "level": "todo",
+      "duedate": "12-12-2023",
+      "assignedto": "Danush Adithya P",
+      "priority": "high"
+    },
+    {
+      "id": 2,
+      "project": "TIPS 2023",
+      "task": "Kanban Board",
+      "level": "completed",
+      "duedate": "12-12-2023",
+      "assignedto": "Danush Adithya P",
+      "priority": "low"
+    },
+    {
+      "id": 3,
+      "project": "TIPS 2023",
+      "task": "Kanban Board",
+      "level": "inprogress",
+      "duedate": "12-12-2023",
+      "assignedto": "Vignesh Shivaram",
+      "priority": "medium"
+    },
+    {
+      "id": 4,
+      "project": "Expense Tracker",
+      "task": "Complete Dashboard",
+      "level": "todo",
+      "duedate": "2023-12-30",
+      "assignedto": "Vignesh Shivaram",
+      "priority": "medium"
+    },
+    {
+      "id": 5,
+      "project": "Expense Tracker - Python",
+      "task": "Complete Dashboard",
+      "level": "inprogress",
+      "duedate": "2023-12-21",
+      "assignedto": "Dhana Abhiraj",
+      "priority": "low"
     }
   ]
 }
