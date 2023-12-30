@@ -41,6 +41,9 @@ let modify = false
 (async()=>{
     const currentuserres = await fetch('/get-user')
     const currentuser = await currentuserres.json()
+    if(currentuser.username === undefined) {
+        window.location.replace('/signin')
+    }
     username.innerText = currentuser.username
     const datares = await fetch('/users-data')
     jsondata = await datares.json()
@@ -201,8 +204,16 @@ function populateselect(users,tasks) {
 
 // Event Listeners
 
-logoutbtn.addEventListener('click',()=>{
-    window.location.href = '/signin'
+logoutbtn.addEventListener('click',async ()=>{
+    const user = {}
+    const response = await fetch('/load-user', {
+        method:'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body:JSON.stringify(user),
+    });
+    window.location.replace('/signin')
 })
 
 addtaskbtn.addEventListener('click',()=>{

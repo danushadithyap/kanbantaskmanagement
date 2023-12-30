@@ -307,7 +307,7 @@ body{
 .task-board-list-section{
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 30%;
 }
 
 .todo{
@@ -332,6 +332,11 @@ body{
 .task-board-list-items{
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
+    height: 100%;
+    margin-bottom: 1rem;
+    padding: 0 2.5%;
+    background: var(--primary-white);
 }
 
 .task-board-list-item{
@@ -591,4 +596,8 @@ body{
 
 .form-type{
     margin-right: 1%;
+}
+
+.user-manual{
+    display: none;
 }

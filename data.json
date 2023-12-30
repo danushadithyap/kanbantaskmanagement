@@ -27,6 +27,13 @@
       "email": "dhana@gmail.com",
       "password": "12345678",
       "role": "developer"
+    },
+    {
+      "id": 5,
+      "username": "Danush",
+      "email": "danush123@gmail.com",
+      "password": "12345678",
+      "role": "developer"
     }
   ],
   "tasks": [
@@ -79,9 +86,18 @@
       "id": 6,
       "project": "Expense Tracker",
       "task": "Modularize",
-      "level": "inprogress",
+      "level": "todo",
       "duedate": "2023-12-27",
       "assignedto": "Vignesh Shivaram",
+      "priority": "low"
+    },
+    {
+      "id": 7,
+      "project": "Expense Tracker",
+      "task": "Complete Authen",
+      "level": "inprogress",
+      "duedate": "2023-12-31",
+      "assignedto": "Danush Adithya P",
       "priority": "low"
     }
   ]
