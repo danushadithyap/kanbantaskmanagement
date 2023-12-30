@@ -34,8 +34,8 @@
       "id": 1,
       "project": "TIPS 2024",
       "task": "Kanban Board",
-      "level": "todo",
-      "duedate": "12-12-2023",
+      "level": "inprogress",
+      "duedate": "2023-12-21",
       "assignedto": "Danush Adithya P",
       "priority": "high"
     },
@@ -44,7 +44,7 @@
       "project": "TIPS 2023",
       "task": "Kanban Board",
       "level": "completed",
-      "duedate": "12-12-2023",
+      "duedate": "2023-12-21",
       "assignedto": "Danush Adithya P",
       "priority": "low"
     },
@@ -52,27 +52,36 @@
       "id": 3,
       "project": "TIPS 2023",
       "task": "Kanban Board",
-      "level": "inprogress",
-      "duedate": "12-12-2023",
+      "level": "completed",
+      "duedate": "2023-12-28",
       "assignedto": "Vignesh Shivaram",
       "priority": "medium"
     },
     {
       "id": 4,
-      "project": "Expense Tracker",
-      "task": "Complete Dashboard",
+      "project": "Kanban Board",
+      "task": "Modularize",
       "level": "todo",
       "duedate": "2023-12-30",
-      "assignedto": "Vignesh Shivaram",
-      "priority": "medium"
+      "assignedto": "Danush Adithya P",
+      "priority": "low"
     },
     {
       "id": 5,
       "project": "Expense Tracker - Python",
       "task": "Complete Dashboard",
-      "level": "inprogress",
+      "level": "todo",
       "duedate": "2023-12-21",
       "assignedto": "Dhana Abhiraj",
+      "priority": "low"
+    },
+    {
+      "id": 6,
+      "project": "Expense Tracker",
+      "task": "Modularize",
+      "level": "inprogress",
+      "duedate": "2023-12-27",
+      "assignedto": "Vignesh Shivaram",
       "priority": "low"
     }
   ]
